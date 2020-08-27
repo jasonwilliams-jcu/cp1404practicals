@@ -1,13 +1,25 @@
 MINIMUM_LENGTH = 4
 
 
-def version_1():
-    password = input("Enter password of at least {} characters: ".format(MINIMUM_LENGTH))
-    while len(password) < MINIMUM_LENGTH:
-        password = input("Enter password of at least {} characters: ".format(MINIMUM_LENGTH))
+#refactor password check program to use functions
 
+
+def main():
+    password = get_password()
+    while len(password) < MINIMUM_LENGTH:
+        password = get_password()
+
+    asterisks(password)
+
+
+def asterisks(password):
     print('*' * len(password))
 
 
-version_1()
+def get_password():
+    password = input("Enter password of at least {} characters: ".format(MINIMUM_LENGTH))
+    return password
+
+
+main()
 
