@@ -1,12 +1,19 @@
-score = float(input("Enter score: "))
 
-while score > 100 or score < 0:
-    print("Invalid score")
+def main():
     score = float(input("Enter score: "))
+    print(grade_checker(score))
 
-if score >= 50 and score < 90:
-    print("passable")
-elif score >= 90 and score <= 100:
-    print("excellent")
-else:
-    print("Bad")
+
+def grade_checker(score):
+    if score < 0 or score > 100:
+        return "Invalid score"
+    elif score >= 90:
+        return "Excellent"
+    elif score >= 50:
+        return "Passable"
+    else:
+        return "Bad"
+
+
+main()
+
