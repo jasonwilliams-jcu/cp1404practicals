@@ -4,10 +4,10 @@ import random
 def main():
 
     score = float(input("Enter score: "))
-    print(grade_checker(score))
+    print("the entered score is {} and is {}".format(score, grade_checker(score)))
 
     random_score = float(random.randint(0, 101))
-    print("the random score is", random_score, "and is", grade_checker(random_score))
+    print("the random score is {} and is {}".format(random_score, grade_checker(random_score)))
 
 
 def grade_checker(score):
